@@ -1,5 +1,11 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true
+  },
   "rules": {
     "strict": [0],
     "func-names": [0],
@@ -7,6 +13,7 @@
     "global-require": [0],
     "no-console": [0],
     "import/no-dynamic-require": [0],
+    "react/jsx-uses-react": "off",
     "comma-dangle": [
       "error",
       {

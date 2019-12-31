@@ -1,0 +1,51 @@
+{
+  "name": "zf-tools",
+  "version": "0.0.1",
+  "description": "tools for zf series",
+  "keywords": [
+    "react",
+    "tools"
+  ],
+  "homepage": "todo",
+  "author": "feasin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Fea-Sin/zf-tools.git"
+  },
+  "bugs": {
+    "url": "http://github.com/Fea-Sin/todo"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "zf-tools": "./bin/zf-tools.js",
+    "zf-tools-run": "./bin/zf-tools-run.js"
+  },
+  "scripts": {
+    "pub": "git push origin && npm publish --access public",
+    "postinstall": "node lib/init.js",
+    "lint": "eslint lib",
+    "prettier": "node ./script/prettier.js",
+    "test": "jest && npm run lint"
+  },
+  "peerDependencies": {
+    "typescript": ">=3.5.2"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "pre-commit": "1.2.2",
+    "prettier": "1.19.1"
+  },
+  "pre-commit": [
+    "prettier"
+  ]
+}

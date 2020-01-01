@@ -16,7 +16,6 @@
     "url": "http://github.com/Fea-Sin/todo"
   },
   "license": "MIT",
-  "main": "index.js",
   "bin": {
     "zf-tools": "./bin/zf-tools.js",
     "zf-tools-run": "./bin/zf-tools-run.js"
@@ -25,6 +24,7 @@
     "pub": "git push origin && npm publish --access public",
     "postinstall": "node lib/init.js",
     "lint": "eslint lib",
+    "lint-fix": "eslint --fix lib --ext '.js'",
     "prettier": "node ./script/prettier.js",
     "test": "jest && npm run lint"
   },
@@ -32,12 +32,40 @@
     "typescript": ">=3.5.2"
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-member-expression-literals": "^7.2.0",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/plugin-transform-property-literals": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/plugin-transform-spread": "^7.2.2",
+    "@babel/plugin-transform-template-literals": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.0",
+    "babel-plugin-inline-import-data-uri": "^1.0.1",
     "chalk": "^3.0.0",
     "colorful": "^2.1.0",
     "commander": "^4.0.1",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-code": "^0.1.4",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-watch": "^5.0.1",
+    "is-windows": "^1.0.2",
     "merge2": "^1.3.0",
+    "minimist": "^1.2.0",
+    "rimraf": "^3.0.0",
     "through2": "^3.0.1",
+    "typescript": "^3.7.4",
     "webpack": "^4.0.0"
   },
   "devDependencies": {
@@ -52,6 +80,7 @@
     "prettier": "1.19.1"
   },
   "pre-commit": [
+    "lint-fix",
     "lint",
     "prettier"
   ]

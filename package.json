@@ -22,7 +22,6 @@
   },
   "scripts": {
     "pub": "git push origin && npm publish --access public",
-    "postinstall": "node lib/init.js",
     "lint": "eslint lib",
     "lint-fix": "eslint --fix lib --ext '.js'",
     "prettier": "node ./script/prettier.js",

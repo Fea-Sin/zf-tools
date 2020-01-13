@@ -1,6 +1,6 @@
 {
   "name": "zf-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tools for zf series",
   "keywords": [
     "react",
@@ -26,9 +26,6 @@
     "lint-fix": "eslint --fix lib --ext '.js'",
     "prettier": "node ./script/prettier.js",
     "test": "jest && npm run lint"
-  },
-  "peerDependencies": {
-    "typescript": ">=3.5.2"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -66,7 +63,6 @@
     "rimraf": "^3.0.0",
     "run-git-command": "^1.2.3",
     "through2": "^3.0.1",
-    "typescript": "^3.7.4",
     "webpack": "^4.0.0"
   },
   "devDependencies": {
